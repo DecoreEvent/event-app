@@ -4,20 +4,23 @@
 
 <h2>EVENT</h2>
 <div>
-    <form>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
         <div class="form-group">
-            <label for="usr">Namn på event:</label>
+            @Html.Label("Namn","Namn på event:")
+            @Html.TextBox("Name","", new { @class="form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Datum", "Datum:")
+            @Html.TextBox("Date", "", new { @class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.Label("Adress", "Adress:")
             <input type="text" class="form-control" id="usr">
         </div>
-        <div class="form-group">
-            <label for="usr">Datum:</label>
-            <input type="date" class="form-control" id="usr">
-        </div>
-        <div class="form-group">
-            <label for="usr">Adress:</label>
-            <input type="text" class="form-control" id="usr">
-        </div>
-        <label for="usr">Typ av event:</label>
+        @Html.Label("Event", "Typ av event:")
         <div class="form-group">
             <select class="selectpicker">
                 <option>Sittning</option>
@@ -28,11 +31,12 @@
         </div>
 
         <div class="form-group">
-            <label for="textAreaDescription">Example textarea</label>
-            <textarea class="form-control" id="textAreaDescription" rows="3"></textarea>
+            @Html.Label("TextArea", "Event beskrivning:")
+            @Html.TextArea("TextArea", "", new { @class = "form-control" })
         </div>
-
-        <div class="form-group">
+        @Html.Label("Ansvarig", "Ansvarig för event:")
+       //@Html.DropDownList("eventAnsvarig")
+    <div class="form-group">
             <select class="selectpicker" multiple>
                 <option>Martin</option>
                 <option>Vidar</option>
@@ -40,7 +44,7 @@
                 <option>Lille Patrik</option>
             </select>
         </div>
-        <button type="button" class="btn btn-danger">Avbryt</button>
-        <button type="button" class="btn btn-success">Klar</button>
-    </form>
+        <button type="submit" class="btn btn-danger">Avbryt</button>
+        <button type="submit" class="btn btn-success">Klar</button>
+    }
 </div>
