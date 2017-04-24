@@ -1,4 +1,5 @@
-﻿@{
+﻿@model decore.ViewModels.EventViewModel
+@{
     ViewBag.Title = "Event Page";
 }
 
@@ -21,23 +22,19 @@
             @Html.Label("Adress", "Adress:")
             <input type="text" class="form-control" id="usr">
         </div>
+
         @Html.Label("Event", "Typ av event:")
-        <div class="form-group">
-            <select class="selectpicker">
-                <option>Sittning</option>
-                <option>Mat hos patrik</option>
-                <option>Fest</option>
-                <option>Lan</option>
-            </select>
-        </div>
+        @Html.DropDownListFor(model => model.Events, new SelectList(Model.Events, "EventId", "EventTYPE"), new { @class = "form-control" })
 
 
         <div class="form-group">
             @Html.Label("TextArea", "Event beskrivning:")
             @Html.TextArea("TextArea", "", new { @class = "form-control" })
         </div>
+        
+        
+        
         @Html.Label("Ansvarig", "Ansvarig för event:")
-       //@Html.DropDownList("eventAnsvarig")
     <div class="form-group">
             <select class="selectpicker" multiple>
                 <option>Martin</option>
