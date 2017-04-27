@@ -10,7 +10,7 @@ namespace decore.Controllers
 {
     public class EventController : Controller
     {
-        // GET: Event
+      
         public ActionResult Index()
         {
             var events = new List<Event>
@@ -28,5 +28,14 @@ namespace decore.Controllers
 
             return View(viewModel);
         }
+
+        // GET: Event
+        [HttpPost]
+        public CreateEvent Index()
+        {
+
+
+        }
+
     }
 }
