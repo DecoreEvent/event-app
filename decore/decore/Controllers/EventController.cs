@@ -13,10 +13,11 @@ namespace decore.Controllers
       
         public ActionResult Index()
         {
-            new Event()
+           new Event()
             { 
                 nameId = 1, name = "Putterik"
             };
+
             var events = new List<Event>
             {
                 new Event() { EventId = 1, EventType = "Sittning"},

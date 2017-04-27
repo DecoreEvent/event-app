@@ -9,7 +9,6 @@ namespace decore.Models
     {
         public int EventId { get; set; }
         public string EventType { get; set; }
-
         public int nameId { get; set; }
         public string name { get; set; }
 
