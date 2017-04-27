@@ -11,8 +11,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-group">
-            @Html.Label("Namn","Namn på event:")
-            @Html.TextBox("Name","", new { @class="form-control" })
+            @Html.LabelFor(model => model.nameId)
+            @Html.TextBoxFor(model => model.name, new { @class="form-control" })
         </div>
         <div class="form-group">
             @Html.Label("Datum", "Datum:")
