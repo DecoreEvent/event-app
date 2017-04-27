@@ -3,43 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 using decore.Models;
 using decore.ViewModels;
 
 namespace decore.Controllers
 {
-    public class EventController : Controller
+    public class CreateEventController : Controller
     {
       
         public ActionResult Index()
         {
-           new Event()
-            { 
-                nameId = 1, name = "Putterik"
-            };
-
-            var events = new List<Event>
+            var eventsTypes = new List<Event>
             {
                 new Event() { EventId = 1, EventType = "Sittning"},
                 new Event() { EventId = 2, EventType = "Mat hos patrik"},
                 new Event() { EventId = 3, EventType = "Fest"},
                 new Event() { EventId = 4, EventType = "Lan"},
-            };
-         
+            };        
                var viewModel = new EventViewModel
             {
-                Events = events
+                Events = eventsTypes
             };
-
             return View(viewModel);
         }
 
-        // GET: Event
+
+        [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult CreateEvent()
+        public ActionResult CreateEvent(EventViewModel viewModel)
         {
-            return RedirectToAction("Index");
+
+
+
+            return RedirectToAction(
+                "Index", 
+                "Events", 
+                new
+                {
+                    Title = viewModel.Title,
+                    Description = viewModel.Description
+                });
         }
+
+
+     
+
+
+
+
 
     }
 }

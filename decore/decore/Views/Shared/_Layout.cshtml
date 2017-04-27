@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - DeCore</title>
+    <title>@ViewBag.Title - Decore</title>
     @Scripts.Render("~/bundles/modernizr")
 
     <!-- Shared Contet css from site.css renders here as bundle -->
@@ -17,9 +17,11 @@
 @RenderSection("outsideContainer", required: false)
 
 <!-- All pages are rendered inside this container-->
-<div class="container page-wrapper">
-    @RenderBody()
-</div>
+<section class="page-wrapper">
+    <div class="container">
+        @RenderBody()
+    </div>    
+</section>
 
 
 

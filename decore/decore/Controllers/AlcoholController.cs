@@ -14,7 +14,6 @@ namespace decore.Controllers
         public ActionResult Index()
         {
 
-
             var beverages = new List<Beverage>
             {
                 new Beverage() { BeverageId = 1, Title = "Öl", Price = 22, Volume = 23},
