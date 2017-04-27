@@ -3,6 +3,7 @@
     ViewBag.Title = "Event Page";
 }
 
+
 <h2>EVENT</h2>
 <div>
     @using (Html.BeginForm())
@@ -43,7 +44,23 @@
                 <option>Lille Patrik</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-danger">Avbryt</button>
-        <button type="submit" class="btn btn-success">Klar</button>
+
+            <button type="submit" class="btn btn-danger">Avbryt</button>
+            <button type="submit" class="btn btn-success">Klar</button>
+
+            <div class="alert alert-success fade">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>Event created!</strong> 
+            </div>
+
     }
 </div>
+
+@section scripts {
+<script>
+                $(".btn-success").on("click", function() {
+                    $(".alert").removeClass("in").show();
+	                $(".alert").delay(200).addClass("in").fadeOut(2000);
+                });
+</script>
+    }
