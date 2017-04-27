@@ -31,10 +31,9 @@ namespace decore.Controllers
 
         // GET: Event
         [HttpPost]
-        public CreateEvent Index()
+        public ActionResult CreateEvent()
         {
-
-
+            return RedirectToAction("Index");
         }
 
     }
