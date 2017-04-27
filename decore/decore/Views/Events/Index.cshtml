@@ -10,7 +10,7 @@
         margin-top: 50px;
     }
     .event {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 
     .thumbnail {
@@ -30,9 +30,9 @@
     @foreach (var item in Model.Events)
     {
         <div class="row event">
-            <div class="col-sm-12 col-md-8 col-md-offset-2">
+            <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
                 <div class="thumbnail">
-                    <img src="..." alt="...">
+                    <img src="http://lazyacres.events/wp-content/uploads/2015/08/events.jpg" alt="event image">
                     <div class="caption">
                         <h3>@item.Title</h3>
                         <p>@item.Description</p>
