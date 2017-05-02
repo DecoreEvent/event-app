@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using decore.Models;
 using decore.ViewModels;
+using Decore.Models;
 
 namespace decore.Controllers
 {

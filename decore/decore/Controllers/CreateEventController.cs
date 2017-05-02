@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-using decore.Models;
 using decore.ViewModels;
+using Decore.Models;
 
 namespace decore.Controllers
 {
@@ -35,7 +35,10 @@ namespace decore.Controllers
         {
 
 
+            // post to event webservice 
 
+
+            // Send dummy data
             return RedirectToAction(
                 "Index", 
                 "Events", 

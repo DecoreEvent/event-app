@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using decore.Models;
+﻿using System.Collections.Generic;
+using Decore.Models;
 
 namespace decore.ViewModels
 {

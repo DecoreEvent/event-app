@@ -10,6 +10,7 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
+
 <!-- Imports the Navigation bar-->
 @Html.Partial("_Navbar")
 
@@ -19,8 +20,10 @@
 <!-- All pages are rendered inside this container-->
 <section class="page-wrapper">
     <div class="container">
+
         @RenderBody()
-    </div>    
+
+    </div>
 </section>
 
 
